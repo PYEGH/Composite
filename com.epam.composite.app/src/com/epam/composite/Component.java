@@ -1,11 +1,24 @@
 package com.epam.composite;
 
 public interface Component {
+	void printValue();
+
+	int getValue();
+
+	void setValue(int value);
+
+	void setLeftChild(Component component);
+
+	void setRightChild(Component component);
+
 	int getDeep();
 
-	void setDeep(int value);
+	void setDeep(int deep);
 
-	void setParent(Component parent);
+	Component getLeftChild();
 
-	void printValue();
+	Component getRightChild();
+
+	Component add(Component root, Component component);
+
 }
